@@ -88,9 +88,11 @@ export function StrategicNarrativeSection() {
                   then flows back to inform strategy, creating a continuous loop of marketing excellence.
                 </p>
                 <div className="mt-8">
-                  <button className="px-8 py-3 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-md text-white font-medium hover:from-blue-600 hover:via-purple-700 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 animate-gradient-x bg-[length:200%_200%]">
-                    See the Complete Vision
-                  </button>
+                  <div className="btn-rainbow-shadow-wrapper rounded-md inline-block">
+                    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-md text-white font-medium hover:from-blue-600 hover:via-purple-700 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 animate-gradient-x bg-[length:200%_200%] btn-rainbow-shadow">
+                      See the Complete Vision
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

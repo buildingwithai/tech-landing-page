@@ -29,12 +29,16 @@ export function HeroSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md text-white font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Try Demo
-            </button>
-            <button className="px-8 py-3 bg-transparent border border-white/30 backdrop-blur-sm rounded-md text-white font-medium hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
+            <div className="btn-rainbow-shadow-wrapper rounded-md">
+              <button className="relative px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md text-white font-medium transition-all duration-300 transform hover:scale-[1.03] btn-rainbow-shadow">
+                Try Demo
+              </button>
+            </div>
+            <div className="btn-rainbow-shadow-wrapper rounded-md">
+              <button className="relative px-8 py-3 bg-black border border-white/30 backdrop-blur-sm rounded-md text-white font-medium transition-all duration-300 btn-rainbow-shadow">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </div>

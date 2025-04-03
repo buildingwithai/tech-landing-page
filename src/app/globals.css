@@ -204,3 +204,72 @@
 .animate-border-glow {
   animation: border-glow 3s linear infinite;
 }
+
+@keyframes glitch-border {
+  0%, 100% {
+    clip-path: inset(0 0 98% 0);
+  }
+  20% {
+    clip-path: inset(0 80% 0 0);
+  }
+  40% {
+    clip-path: inset(60% 0 0 0);
+  }
+  60% {
+    clip-path: inset(0 0 0 75%);
+  }
+  80% {
+    clip-path: inset(90% 0 0 0);
+  }
+}
+
+.animate-glitch-border {
+  position: relative;
+}
+
+.animate-glitch-border::before,
+.animate-glitch-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  animation: glitch-border 2s infinite;
+  animation-timing-function: steps(2, end);
+}
+
+.animate-glitch-border::after {
+  background: rgba(255, 0, 255, 0.3);
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+/* Rainbow button hover effect */
+.btn-rainbow-shadow {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-rainbow-shadow-wrapper {
+  position: relative;
+}
+
+.btn-rainbow-shadow-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: -4px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 300% 100%;
+  animation: gradient-x 5s ease infinite;
+  filter: blur(8px);
+}
+
+.btn-rainbow-shadow-wrapper:hover::before {
+  opacity: 1;
+}

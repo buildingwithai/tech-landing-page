@@ -241,12 +241,14 @@ export function InquiryForm() {
             </div>
             <p className="text-gray-800 dark:text-gray-200 font-medium">Thank you for your inquiry!</p>
             <p className="text-gray-600 dark:text-gray-400 text-sm">We'll get back to you shortly.</p>
-            <button
-              onClick={() => setFormStatus('idle')}
-              className="mt-4 px-6 py-2 bg-gray-100 dark:bg-gray-700 rounded-md text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-            >
-              Submit Another Inquiry
-            </button>
+            <div className="btn-rainbow-shadow-wrapper rounded-md inline-block">
+              <button
+                onClick={() => setFormStatus('idle')}
+                className="relative mt-4 px-6 py-2 bg-gray-100 dark:bg-gray-700 rounded-md text-gray-800 dark:text-gray-200 font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300 btn-rainbow-shadow"
+              >
+                Submit Another Inquiry
+              </button>
+            </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -347,27 +349,29 @@ export function InquiryForm() {
               </div>
             </div>
             
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md text-white font-medium transition-all duration-300 ${
-                isSubmitting 
-                  ? 'opacity-70 cursor-not-allowed' 
-                  : 'hover:from-blue-600 hover:to-purple-700 transform hover:scale-[1.02]'
-              }`}
-            >
-              {isSubmitting ? (
-                <span className="flex items-center justify-center">
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Processing...
-                </span>
-              ) : (
-                'Submit Inquiry'
-              )}
-            </button>
+            <div className="btn-rainbow-shadow-wrapper rounded-md w-full">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full relative px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-md text-white font-medium transition-all duration-300 btn-rainbow-shadow ${
+                  isSubmitting 
+                    ? 'opacity-70 cursor-not-allowed' 
+                    : 'hover:from-blue-600 hover:to-purple-700 transform hover:scale-[1.02]'
+                }`}
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Processing...
+                  </span>
+                ) : (
+                  'Submit Inquiry'
+                )}
+              </button>
+            </div>
           </form>
         )}
       </div>
