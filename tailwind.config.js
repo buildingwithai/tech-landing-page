@@ -22,6 +22,12 @@ module.exports = {
         "grow-to-78": "grow-to-78 1.5s ease-out forwards",
         "grow-to-92": "grow-to-92 1.5s ease-out forwards",
         "glitch-border": "glitch-border 2s infinite steps(2, end)",
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "fade-in-delay": "fade-in 0.5s ease-out 0.3s forwards",
+        "float-1": "float-platform 4s ease-in-out infinite",
+        "float-2": "float-platform 4s ease-in-out 0.5s infinite",
+        "float-3": "float-platform 4s ease-in-out 1s infinite",
+        "float-4": "float-platform 4s ease-in-out 1.5s infinite",
       },
       keyframes: {
         "progress-fill-23": {
@@ -65,6 +71,21 @@ module.exports = {
             opacity: "1",
             transform: "translateY(0)",
           },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "float-platform": {
+          "0%": { 
+            transform: "translateY(0px)", 
+          },
+          "50%": { 
+            transform: "translateY(-4px)", 
+          },
+          "100%": { 
+            transform: "translateY(0px)", 
+          }
         },
         "border-glow": {
           "0%": { backgroundPosition: "0% 50%" },
